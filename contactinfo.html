@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script type="text/javascript" src="store_data.js"></script>
+    <style></style>
+</head>
+<body>
+    <h2>Please enter the following details: </h2><br>
+    <form id="add_details" onsubmit="addContactDetails()">
+        
+        First Name:
+        <input type="text" id="fname" required autofocus>
+        
+        Last Name:
+        <input type="text" id="lname" required>
+        
+        Email:
+        <input type="email" id="email" name="email" placeholder="Enter email">
+        
+        Subscription Type:
+        <select id="subscription_type" required>
+            <option value="yearly">Yearly</option>
+            <option value="monthly">Monthly</option>
+            <option value="weekly">Weekly</option>
+        </select>
+        <br><br>
+        
+        <fieldset>
+            <legend><h4>Contact Details:</h4></legend>
+            Street:
+            <input type="text" id="street" required>
+            
+            Apartment (Optional):
+            <input type="text" id="apt">
+            
+            City:
+            <input type="text" id="city" required>
+            <br><br>
+            State:
+            <input type="text" id="state" required>
+            
+            Country/Region:
+            <input type="text" id="country" required>
+            
+            Zip Code:
+            <input type="text" id="zip_code" pattern="[0-9]{5}" required title="5 digit code">
+            <br><br>
+            Phone Number:
+            <input type="text" id="phno" pattern="[0-9]{10}" required title="10 digit number">
+            <br>
+        </fieldset>
+    <br>
+    <button type="submit" form="add_details" value="Submit">Submit</button>
+    </form>
+
+    
+    <p>Your location on the map :-</p>
+
+    <button onclick="getLocation()">Click to view </button>
+
+    <p id="demo"></p>
+    <button type="submit" form="add_details" value="Submit" onclick="paymentsPage()">Proceed for payment</button>
+</body>
+</html>

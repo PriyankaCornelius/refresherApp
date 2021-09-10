@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script type="text/javascript" src="store_data.js"></script>
+    <style></style>
+</head>
+<body>
+    <h2>Please enter the following details: </h2><br>
+    <form id="add_details" onsubmit="addPaymentDetails()">
+        <fieldset>
+            <legend><h4>Payment Details:</h4></legend>
+            Card Number:<br>
+            <input type="text" id="card_number" required pattern="[0-9]{14}" title="14 digit number">
+            <br><br>
+            Name on Card:<br>
+            <input type="text" id="fullname" required>
+            <br><br>
+            Expiration Date:<br>
+            <input type="date" id="exp_date" required>
+            <br><br>
+            Security Code:<br>
+            <input type="text" id="security_code" required pattern="[0-9]{3}" title="3 digit code">
+            <br>
+        </fieldset>
+        <button type="submit" form="add_details" value="Submit">Submit</button>
+    </form>
+</body>
+</html>

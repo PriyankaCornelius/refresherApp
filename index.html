@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <head>
+         <script type="text/javascript" src="store_data.js"></script> 
+        <style></style>
+    </head>
+
+
+    <body>
+        <h1 text-align='center'>Apply for membership</h1>
+        <h2>Please enter your email address</h2>
+        <form id="get_email">
+            <input type="email"  pattern=".+@globex\.com" id="email" name="email" placeholder="Enter email"><br><br>
+        </form>
+        <button type="submit" form="get_email" value="Submit" onclick="contactsPage()">Submit</button><br><br>
+        <button type="button" form="get_email" value="Unsubcribe" onclick="deleteAccount()">Unsubcribe</button>
+    </body>
+
+
+</html>
